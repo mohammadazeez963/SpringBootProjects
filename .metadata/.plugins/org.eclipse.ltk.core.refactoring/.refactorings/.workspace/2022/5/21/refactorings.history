@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;06-EntityRelation&apos;" deleteContents="false" description="Delete resource &apos;06-EntityRelation&apos;" element1="/06-EntityRelation" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1653019523472"/>&#x0A;<refactoring comment="Delete resource &apos;06-EntityRelation&apos;" deleteContents="true" description="Delete resource &apos;06-EntityRelation&apos;" element1="/06-EntityRelation" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1653019580730"/>
+</session>

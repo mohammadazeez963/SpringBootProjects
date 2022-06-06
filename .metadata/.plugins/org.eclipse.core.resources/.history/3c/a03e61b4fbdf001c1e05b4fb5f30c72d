@@ -1,0 +1,33 @@
+package com.zensar.messageapi.rest.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.authority.AuthorityUtils;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.zensar.messageapi.entity.ZensarUser;
+import com.zensar.messageapi.security.jwt.util.JWTUtil;
+
+@RestController
+public class AuthenticationRestController {
+
+	@Autowired
+	private JWTUtil util;
+	
+	// This method is used to do user authentication using username and password passed by user
+	
+	@PostMapping("api/authenticate")
+	public String authenticate(@RequestBody ZensarUser user) {
+		
+		// Check the user existing in DB
+		UsernamePasswordAuthenticationToken authenticationToken;
+		authenticationToken = new UsernamePasswordAuthenticationToken(user.getUsername(),user.getPassword(),AuthorityUtils.createAuthorityList("ROLE_USER") );
+		
+		// If the user exists generate token
+		String token = " ";
+		return token;
+				
+	}
+}

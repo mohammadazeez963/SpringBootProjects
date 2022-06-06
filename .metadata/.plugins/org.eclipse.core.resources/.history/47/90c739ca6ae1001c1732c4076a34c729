@@ -1,0 +1,6 @@
+# Following property is used to change the embedded tomcat container
+# If this property is not written explicitly by default it is 8080
+server.port=8090
+spring.mvc.pathmatch.matching-strategy=ant-path-matcher
+
+management.endpoints.web.exposure.include=*

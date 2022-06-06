@@ -1,0 +1,5 @@
+package com.zensar.messageapi.security.jwt.util;
+
+public class JWTUtil {
+
+}

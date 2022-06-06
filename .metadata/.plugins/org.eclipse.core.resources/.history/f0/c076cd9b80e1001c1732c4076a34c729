@@ -1,0 +1,14 @@
+package com.zensar.displayservice.feign.client;
+
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@FeignClient(value = "messagemicroservice",url = "http://localhost:8092/api/message")
+public interface MessageFeignClient {
+
+	@GetMapping
+	public String callGenerateMessage() {
+		
+	}
+}

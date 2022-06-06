@@ -1,0 +1,15 @@
+# Following property is used to change the embedded tomcat container
+# If this property is not written explicitly by default it is 8080
+server.port=8090
+spring.mvc.pathmatch.matching-strategy=ant-path-matcher
+
+# Following property is used to enable all actuator end point
+management.endpoints.web.exposure.include=*
+
+# Following properties are used to give information about this application
+info.app.name=messageapi
+info.app.description = this message app developed by zensar
+info.app.version = 1.0
+management.info.env.enabled=true
+
+management.endpoint.health.show-details=always

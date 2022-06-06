@@ -1,0 +1,5 @@
+package com.zensar.messageapi.configuration;
+
+public class Swagger2Configuration {
+
+}

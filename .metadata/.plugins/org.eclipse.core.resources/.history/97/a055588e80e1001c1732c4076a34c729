@@ -1,0 +1,20 @@
+package com.zensar.displayservice.rest.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.zensar.displayservice.feign.client.MessageFeignClient;
+
+@RestController
+public class DisplayRestController {
+	
+	@Autowired
+	private MessageFeignClient feignClient;
+		@GetMapping(value = "/api/display")
+		public String printMassage() {
+			
+			// This method to talk to MessageMicroservice and get message
+			return this.feignClient;
+		}
+}

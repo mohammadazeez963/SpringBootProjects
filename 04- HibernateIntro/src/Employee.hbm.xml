@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.jboss.org/dtd/hibernate/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping>
+  <class name="com.zensar.bean.Employee" table="Employees">
+    <id name="empId" column = "e_id">
+        <generator class="native" ></generator>
+    </id>
+      <property name="name" column="e_name"></property>
+      <property name="dateOfJoin" column="e_dof"></property>
+      <property name="basic" column="e_basic"></property>
+      <property name="grade" column="e_grade"></property>
+      
+
+  </class>
+</hibernate-mapping>

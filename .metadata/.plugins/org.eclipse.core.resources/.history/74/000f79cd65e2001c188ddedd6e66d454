@@ -1,0 +1,6 @@
+server.port=9090
+ 
+spring.cloud.gateway.discovery.locator.enabled=true
+spring.cloud.gateway.discovery.locator.lower-case-service-id=true
+
+spring.application.name=gateway

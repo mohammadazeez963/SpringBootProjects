@@ -1,0 +1,19 @@
+package com.zensar.messageapi.web.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class MessageController {
+	
+	@GetMapping("/welcome")
+	public String web(Model m) {
+		System.out.println("In Home()");
+		m.addAttribute("name", "Zensar India");
+		return "index"; // Here we are returning the name of html page
+									// This template must be present in src/main/resources/templates folder
+		
+	}
+
+}

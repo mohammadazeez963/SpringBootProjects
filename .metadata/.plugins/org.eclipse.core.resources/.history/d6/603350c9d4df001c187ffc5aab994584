@@ -1,0 +1,21 @@
+package client;
+
+import org.springframework.http.HttpMethod;
+import org.springframework.web.client.RestTemplate;
+
+public class ClientBasic {
+
+	public static void main(String[] args) {
+		// following the url on server we want to access
+		
+		String url = "http://localhost:8090/api/message";
+		
+		// RestTemplate is a class given by spring to consume REST web service
+		
+		RestTemplate rt = new RestTemplate();
+		String credentials = "zensar:zensar";
+		rt.exchange(url, HttpMethod.GET, null, String.class);
+
+	}
+
+}

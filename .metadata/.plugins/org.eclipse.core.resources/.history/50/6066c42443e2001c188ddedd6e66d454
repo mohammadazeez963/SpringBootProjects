@@ -1,0 +1,17 @@
+package com.zensar.displayservice.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.zensar.displayservice.feign.client.MessageFeignClient;
+
+@Service
+public class DisplayServiceImpl {
+	@Autowired
+	private MessageFeignClient feignClient;
+	
+	public String printMessage() {
+		return this.feignClient.callGenerateMessage();
+	}
+
+}

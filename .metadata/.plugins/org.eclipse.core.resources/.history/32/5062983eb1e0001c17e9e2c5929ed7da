@@ -1,0 +1,5 @@
+package com.zensar.messageapi.web.controller;
+
+public class MessageController {
+
+}

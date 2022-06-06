@@ -1,0 +1,32 @@
+package client;
+
+
+
+
+import org.springframework.web.client.RestTemplate;
+
+import com.zensar.messageapi.entity.ZensarUser;
+
+
+public class ClientBasic {
+
+	public static void main(String[] args) {
+		
+		
+		
+		
+		String url = "http://localhost:8090/api/authenticate";
+		
+		// RestTemplate is a class given by spring to consume REST web service
+		
+		RestTemplate rt = new RestTemplate();
+		ZensarUser request = new ZensarUser();
+		request.setUsername("azeez");
+		request.setPassword("azeez");
+		
+		String token = rt.postForObject(url, request, String.class);
+		System.out.println(token);
+		
+	}
+
+}

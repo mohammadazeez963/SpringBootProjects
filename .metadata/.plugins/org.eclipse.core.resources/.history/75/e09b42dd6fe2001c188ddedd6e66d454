@@ -1,0 +1,16 @@
+server.port=8093
+spring.application.name=displayservice
+
+#Following property tells circuit breaker to consider last 10 calls to decide whether service is running OR NOT
+resilience4j.circuitbreaker.instances.messageservice.sliding-window-size=10
+ 
+#Following property tells circuit breaker if 50% of last 10 calls are failed then consider service is down
+resilience4j.circuitbreaker.instances.messageservice.failure-rate-threshold=50
+ 
+#Wait for following time specified (Don't make call to miroservice)
+resilience4j.circuitbreaker.instances.messageservice.wait-duration-in-open-state=30000
+ 
+#Following property tells circuit breaker to allow only 5 calls
+resilience4j.circuitbreaker.instances.messageservice.permitted-number-of-calls-in-half-open-state=5
+
+spring.config.import=optional:configserver:http://localhost:8888
