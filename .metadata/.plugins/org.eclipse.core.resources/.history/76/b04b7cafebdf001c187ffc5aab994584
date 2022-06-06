@@ -1,8 +1,0 @@
-import com.zensar.messageapi.security.jwt.util.JWTUtil;
-
-public class TestJwt {
-	public static void main(String[] args) {
-		JWTUtil jwt = new JWTUtil();
-		System.out.println(jwt.generateToken("azeez"));
-	}
-}
